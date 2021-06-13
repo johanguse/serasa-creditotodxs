@@ -27,23 +27,29 @@ export function Login() {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <div>{error && JSON.stringify(error)}</div>
+      <div className="form-warp">
+        <h1 className="form-warp-title">Login into your account</h1>
+        <form onSubmit={handleSubmit}>
+          <div className="form-warp-error">{error && JSON.stringify(error)}</div>
 
-        <label htmlFor="input-email">Email</label>
-        <input id="input-email" type="email" ref={emailRef} />
+          <div className="mb-4">
+            <label htmlFor="input-email" className="form-warp-label">Email</label>
+            <input id="input-email" type="email" ref={emailRef} className="form-warp-input" placeholder="Johnbull@example.com" />
+          </div>
 
-        <label htmlFor="input-password">Password</label>
-        <input id="input-password" type="password" ref={passwordRef} />
+          <div className="mb-4">
+            <label htmlFor="input-password" className="form-warp-label">Password</label>
+            <input id="input-password" type="password" ref={passwordRef} className="form-warp-input" placeholder="Enter your password" />
+          </div>
 
+          <br />
+          <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Sign In</button>
+        </form>
         <br />
-        <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Sign In</button>
-        <button type="submit">Login</button>
-      </form>
-      <br />
-      <p>
-        Don't have an account? <Link to="/signup">Sign Up</Link>
-      </p>
+        <p>
+          Don't have an account? <Link to="/signup">Sign Up</Link>
+        </p>
+      </div>
     </>
   )
 }
