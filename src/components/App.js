@@ -7,7 +7,7 @@ import { PrivateRoute } from './PrivateRoute'
 
 export function App() {
   return (
-    <div>
+    <div className="h-screen w-full flex justify-center items-center bg-green-500">
       <h1>supabase-auth-react</h1>
       <Router>
         <AuthProvider>

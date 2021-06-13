@@ -37,7 +37,7 @@ export function Login() {
         <input id="input-password" type="password" ref={passwordRef} />
 
         <br />
-
+        <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Sign In</button>
         <button type="submit">Login</button>
       </form>
       <br />
