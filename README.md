@@ -1,7 +1,11 @@
 # Atention this still in development
+User to test
+someone@email.com
+JBsdnjsZMDCiycclKDIG
 ## Features
 - React with CRA
 - Login with Supabase
+- Email confirmations is disabled
 
 ### TO DO
 - Create tests
