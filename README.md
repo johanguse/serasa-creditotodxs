@@ -1,7 +1,7 @@
 # Atention this still in development
-User to test
-someone@email.com
-JBsdnjsZMDCiycclKDIG
+User to test\
+User: `someone@email.com`\
+Pass: `JBsdnjsZMDCiycclKDIG`
 ## Features
 - React with CRA
 - Login with Supabase
