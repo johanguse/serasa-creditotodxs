@@ -1,10 +1,48 @@
-# Getting Started with Create React App
+## Features
+- React with CRA
+- Login with Supabase
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### TO DO
+- Create tests
+- Improve resposive
+- Add Storybook
+- Add components to Storybook
 
-## Available Scripts
+## Test Specifications
+Antes de tudo, este documento é composto de 1 páginas, mas não tem nada de difícil. Este problema tem o propósito de ser simples e objetivo. Nada de enrolação ou de ocupar muito do seu tempo. Queremos que este processo seja adequado a sua rotina e o instigue a concluí-lo.
 
-In the project directory, you can run:
+### O problema:
+A empresa CréditoParaTodxs é uma empresa multinacional que ajuda milhões de pessoas a conseguirem crédito pessoal.
+
+Um dos grandes desafios desta empresa, é se comunicar de forma efetiva com seus respectivos clientes. Por exemplo, uma das necessidades é apresentar, de acordo com sua saúde financeira, propostas de empréstimo pessoal.
+
+### Considere os seguintes critérios fictícios:
+Você está liberado(a) para utilizar a tecnologia que domina atualmente e de forma criativa demonstrar seu conhecimento, para desenvolver um fluxo que:
+
+- Liste as ofertas de crédito de acordo com o descritivo técnico;
+- Detalhe a oferta do usuário ao momento de escolha;
+- Apresente a revisão das informações;
+- E permita-o realizar a contratação;
+- Caso você seja uma pessoa que manda bem em front, se sinta livre em demonstrar seu conhecimento com uma jornada bonitona, ou se você manda bem em backend, fique à vontade para criar serviços para responder à esta jornada.
+
+### Critérios de Avaliação:
+- Estrutura de dados e algoritmo;
+- Objetividade e qualidade técnica;
+- Versionamento de código e entrega;
+- Compreensão da regra de negócio;
+
+
+### Entrega da Solução:
+
+O código-fonte do sistema precisa ser versionado com e enviado para um repositório público de sua preferência (github ou outro). O código deve incluir um arquivo README.md na raiz com a documentação do sistema, incluindo a descrição de como compilar e executar o programa, além das instruções de utilização. A resposta ao desafio será o link do repositório público.
+
+As informações de acesso ao seu repositório público precisam ser postadas na sua ficha de inscrição até o dia 23 de junho de 2021.
+ 
+
+## How to run
+### `yarn`
+
+Install all dependencies
 
 ### `yarn start`
 
@@ -29,42 +67,8 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
