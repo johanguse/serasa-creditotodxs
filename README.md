@@ -41,7 +41,7 @@ As informações de acesso ao seu repositório público precisam ser postadas na
  
 
 ## How to run
-### Configure the .env
+### `Configure the .env`
 
 1 - Create a account on supabase.io\
 2 - Create a .env file with REACT_APP_SUPABASE_URL and REACT_APP_SUPABASE_PUBLIC_KEY\
