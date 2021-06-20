@@ -9,7 +9,6 @@ export function App() {
   return (
     <div className="app-auth">
       <div className="flex flex-col justify-center mx-auto mb-5 space-y-8">
-        <h1 className="font-bold text-center text-4xl text-pink-500">Programa #Código para <span className="text-pink-800">todXs - Mobile</span></h1>
         <Router>
           <AuthProvider>
             <Switch>

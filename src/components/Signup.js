@@ -38,6 +38,7 @@ export function Signup() {
 
   return (
     <>
+    <h1 className="font-bold text-center text-4xl text-pink-500">Programa #Código para <span className="text-pink-800">todXs - Mobile</span></h1>
       <div className="form-warp">
         <h1 className="form-warp-title">Create a new account</h1>
         <form onSubmit={handleSubmit}>
