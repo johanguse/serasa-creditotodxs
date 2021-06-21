@@ -12,13 +12,12 @@ export function Header({ session }) {
   }
   return (
     <header className="bg-nav">
-      <div className="flex justify-between">
-        <div className="flex flex-col">
-          <div className="grid grid-cols-3 gap-4">
-            <p>Welcome, {user?.id}!</p>
-            <p>{user?.user_metadata.score}</p>
-            <button onClick={handleSignOut}>Sign out</button>
+      <div className="container mx-auto p-4">
+        <div className="flex flex-row justify-between">
+          <div className="">
+            <p>Seu score atual é: {user?.user_metadata.score}</p>
           </div>
+          <button onClick={handleSignOut}>Sign out</button>
         </div>
       </div>
     </header>
