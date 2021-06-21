@@ -32,7 +32,7 @@ export function Login() {
         <span className="text-pink-800">todXs - Mobile</span>
       </h1>
       <div className="form-warp">
-        <h1 className="form-warp-title">Login into your account</h1>
+        <h1 className="form-warp-title">Entrar na sua conta</h1>
         <form onSubmit={handleSubmit}>
           <div className="form-warp-error">
             {error && JSON.stringify(error)}
@@ -40,7 +40,7 @@ export function Login() {
 
           <div className="mb-4">
             <label htmlFor="input-email" className="form-warp-label">
-              Email
+              E-mail
             </label>
             <input
               id="input-email"
@@ -53,7 +53,7 @@ export function Login() {
 
           <div className="mb-4">
             <label htmlFor="input-password" className="form-warp-label">
-              Password
+              Senha
             </label>
             <input
               id="input-password"
@@ -65,16 +65,13 @@ export function Login() {
           </div>
 
           <br />
-          <button
-            type="submit"
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-          >
-            Sign In
+          <button type="submit" className="button-submit">
+            Entrar
           </button>
         </form>
         <br />
         <p>
-          Don't have an account? <Link to="/signup">Sign Up</Link>
+          <Link to="/signup">Não tem conta? Crie uma</Link>
         </p>
       </div>
     </div>

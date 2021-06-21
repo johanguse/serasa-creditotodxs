@@ -43,7 +43,7 @@ export function Signup() {
         <span className="text-pink-800">todXs - Mobile</span>
       </h1>
       <div className="form-warp">
-        <h1 className="form-warp-title">Create a new account</h1>
+        <h1 className="form-warp-title">Criar nova conta</h1>
         <form onSubmit={handleSubmit}>
           <div className="form-warp-error">
             {error && JSON.stringify(error)}
@@ -51,7 +51,7 @@ export function Signup() {
 
           <div className="mb-4">
             <label htmlFor="input-email" className="form-warp-label">
-              Email
+              E-mail
             </label>
             <input
               id="input-email"
@@ -63,7 +63,7 @@ export function Signup() {
 
           <div className="mb-4">
             <label htmlFor="input-password" className="form-warp-label">
-              Password
+              Senha
             </label>
             <input
               id="input-password"
@@ -74,16 +74,13 @@ export function Signup() {
           </div>
 
           <br />
-          <button
-            type="submit"
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-          >
-            Create account
+          <button type="submit" className="button-submit">
+            Criar conta
           </button>
         </form>
         <br />
         <p>
-          Already have an account? <Link to="/login">Log In</Link>
+          <Link to="/login">Já tem conta? Faça o login</Link>
         </p>
       </div>
     </div>
