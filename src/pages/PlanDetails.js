@@ -1,16 +1,20 @@
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import { useAuth } from "../contexts/Auth";
-import { Header } from "./Header";
-import { Loading } from "./Loading";
-import { CardPlans } from "./CardPlans";
+import { Header } from "../components/Header";
+import { Loading } from "../components/Loading";
+import { CardPlans } from "../components/CardPlans";
 import { supabase } from "../services/supabase";
 
-export function Dashboard() {
+export function PlanDetails() {
+  const handleId = useParams();
+
   const { user } = useAuth();
   const [loading, setLoading] = useState(true);
   const [plans, setPlans] = useState([]);
 
   useEffect(() => {
+    console.log(handleId.planId);
     fetchPlans().catch(console.error);
   }, []);
 
@@ -18,7 +22,7 @@ export function Dashboard() {
     let { data: plans, error } = await supabase
       .from("plans")
       .select("*")
-      .lte("min_score", user?.user_metadata.score);
+      .eq('id', handleId.planId);
     if (error) console.log("error", error);
     else setPlans(plans);
     setLoading(false);
