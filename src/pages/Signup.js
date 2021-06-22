@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { useHistory, Link } from "react-router-dom";
-import { updateUserName } from "../utils/updateUser";
+import { updateUserScore } from "../utils/updateUserScore";
 
 import { useAuth } from "../contexts/Auth";
 
@@ -25,7 +25,7 @@ export function Signup() {
       setError(error);
     } else {
       if (user && !error) {
-        await updateUserName(user);
+        await updateUserScore(user);
       } else {
         console.log("ok");
       }
