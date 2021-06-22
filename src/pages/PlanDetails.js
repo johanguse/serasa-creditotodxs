@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import { useAuth } from "../contexts/Auth";
 import { Header } from "../components/Header";
 import { Loading } from "../components/Loading";
-import { CardPlans } from "../components/CardPlans";
 import { supabase } from "../services/supabase";
 
 export function PlanDetails() {
@@ -12,7 +10,6 @@ export function PlanDetails() {
   const [isDisabled, setIsDisabled] = useState(true);
   const [checked, setChecked] = useState(false);
 
-  const { user } = useAuth();
   const [loading, setLoading] = useState(true);
   const [plans, setPlans] = useState([]);
 
