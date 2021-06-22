@@ -14,7 +14,6 @@ export function PlanDetails() {
   const [plans, setPlans] = useState([]);
 
   useEffect(() => {
-    console.log(handleId.planId);
     fetchPlans().catch(console.error);
   }, []);
 
@@ -52,9 +51,9 @@ export function PlanDetails() {
               <div className="flex flex-col">
                 {plans.map((plan) => (
 
-                  <div className="bg-white shadow-md rounded p-4">
-                    <div class="font-bold text-xl mb-2">Plano: {plan.name}</div>
-                    <p class="text-gray-700 text-base mb-2">
+                  <div key={plan.id} className="bg-white shadow-md rounded p-4">
+                    <div className="font-bold text-xl mb-2">Plano: {plan.name}</div>
+                    <p className="text-gray-700 text-base mb-2">
                       {plan.description}
                     </p>
                     <p className="mb-2">Valor disponível:{' '}
@@ -73,14 +72,17 @@ export function PlanDetails() {
                       </p>
                     </div>
                     <div className="mx-4">
-                      <label class="inline-flex items-center mt-3">
-                        <input type="checkbox" class="form-checkbox h-5 w-5 text-orange-600" onClick={onCheckboxClick} /><span class="ml-2 underline">Aceito os termos</span>
+                      <label className="inline-flex items-center mt-3">
+                        <input type="checkbox" className="form-checkbox h-5 w-5 text-orange-600" onClick={onCheckboxClick} /><span className="ml-2 underline">Aceito os termos</span>
                       </label>
                     </div>
-                    <div class="flex items-center justify-center my-2">
+                    <div className="flex items-center justify-center my-2">
                       {
                         !isDisabled
-                          ? <Link className="text-white px-6 py-2 inline-block mt-4 rounded bg-green-500 hover:bg-green-400" to={`/plans/${plan.id}`}>Contratar</Link>
+                          ? <Link className="text-white px-6 py-2 inline-block mt-4 rounded bg-green-500 hover:bg-green-400" to={{
+                            pathname: "/",
+                            search: "?hired=true",
+                          }}>Contratar</Link>
                           : <p className="text-white px-6 py-2 inline-block mt-4 rounded bg-gray-500 cursor-not-allowed">Aceite os termos</p>
                       }
                     </div>
