@@ -1,16 +1,15 @@
 import { useRef, useState } from "react";
 import { useHistory, Link } from "react-router-dom";
-import { updateUserName } from "../utils/updateUser";
 
 import { useAuth } from "../contexts/Auth";
 
-export function Signup() {
+export function Login() {
   const emailRef = useRef();
   const passwordRef = useRef();
 
   const [error, setError] = useState(null);
 
-  const { signUp } = useAuth();
+  const { signIn } = useAuth();
   const history = useHistory();
 
   async function handleSubmit(e) {
@@ -19,17 +18,7 @@ export function Signup() {
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
 
-    const { error, user } = await signUp({ email, password });
-
-    if (error) {
-      setError(error);
-    } else {
-      if (user && !error) {
-        await updateUserName(user);
-      } else {
-        console.log("ok");
-      }
-    }
+    const { error } = await signIn({ email, password });
 
     if (error) return setError(error);
 
@@ -43,7 +32,7 @@ export function Signup() {
         <span className="text-pink-800">todXs - Mobile</span>
       </h1>
       <div className="form-warp">
-        <h1 className="form-warp-title">Create a new account</h1>
+        <h1 className="form-warp-title">Entrar na sua conta</h1>
         <form onSubmit={handleSubmit}>
           <div className="form-warp-error">
             {error && JSON.stringify(error)}
@@ -51,39 +40,38 @@ export function Signup() {
 
           <div className="mb-4">
             <label htmlFor="input-email" className="form-warp-label">
-              Email
+              E-mail
             </label>
             <input
               id="input-email"
               type="email"
               ref={emailRef}
               className="form-warp-input"
+              placeholder="Johnbull@example.com"
             />
           </div>
 
           <div className="mb-4">
             <label htmlFor="input-password" className="form-warp-label">
-              Password
+              Senha
             </label>
             <input
               id="input-password"
               type="password"
               ref={passwordRef}
               className="form-warp-input"
+              placeholder="Enter your password"
             />
           </div>
 
           <br />
-          <button
-            type="submit"
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-          >
-            Create account
+          <button type="submit" className="button-submit">
+            Entrar
           </button>
         </form>
         <br />
         <p>
-          Already have an account? <Link to="/login">Log In</Link>
+          <Link to="/signup">Não tem conta? Crie uma</Link>
         </p>
       </div>
     </div>

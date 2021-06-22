@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { useAuth } from "../contexts/Auth";
-import { Header } from "./Header";
-import { Loading } from "./Loading";
-import { CardPlans } from "./CardPlans";
-import { supabase } from "../supabase";
+import { Header } from "../components/Header";
+import { Loading } from "../components/Loading";
+import { CardPlans } from "../components/CardPlans";
+import { supabase } from "../services/supabase";
 
 export function Dashboard() {
   const { user } = useAuth();
@@ -30,17 +30,17 @@ export function Dashboard() {
 
   return (
     <>
-      <div className="mx-auto bg-grey-400">
+      <div className="mx-auto bg-gray-100">
         <div className="min-h-screen flex flex-col">
           <Header />
 
-          <main className="bg-white-300 flex-1 p-3 overflow-hidden">
-            <div className="grid mt-8  gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-2">
+          <main className="container mx-auto px-4 bg-white-300 flex-1 p-3 overflow-hidden">
+            <div className="grid mt-8 gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-2 text-center">
               {plans.length ? (
                 plans.map((plan) => <CardPlans key={plan.id} plan={plan} />)
               ) : (
                 <span className={"h-full flex justify-center items-center"}>
-                  You do have any tasks yet!
+                  Infelizmente não temos uma oferta de crédito para você!
                 </span>
               )}
             </div>

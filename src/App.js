@@ -1,9 +1,10 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Signup } from "./Signup";
-import { Dashboard } from "./Dashboard";
-import { AuthProvider } from "../contexts/Auth";
-import { Login } from "./Login";
-import { PrivateRoute } from "./PrivateRoute";
+import { Signup } from "./pages/Signup";
+import { Dashboard } from "./pages/Dashboard";
+import { AuthProvider } from "./contexts/Auth";
+import { Login } from "./pages/Login";
+import { PrivateRoute } from "./components/PrivateRoute";
+import { PlanDetails } from "./pages/PlanDetails";
 
 export function App() {
   return (
@@ -14,6 +15,7 @@ export function App() {
             <PrivateRoute exact path="/" component={Dashboard} />
             <Route path="/signup" component={Signup} />
             <Route path="/login" component={Login} />
+            <Route path="/plans/:planId" component={PlanDetails} />
           </Switch>
         </AuthProvider>
       </Router>

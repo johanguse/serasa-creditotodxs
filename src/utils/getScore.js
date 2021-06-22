@@ -1,4 +1,4 @@
-import { supabase } from '../supabase'
+import { supabase } from "../services/supabase";
 
 export const fetchUserScore = async (session) => {
   const { data, error } = await supabase
