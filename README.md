@@ -4,12 +4,13 @@ User: `someone@email.com`\
 Pass: `JBsdnjsZMDCiycclKDIG`
 ## Features
 - React with CRA
-- Login with Supabase
+- Login with Supabase (Email confirmations is disabled)
 - Email confirmations is disabled
 
 ### TO DO
-- Create tests
+- Move all CSS to one file instead of using on components
 - Improve resposive
+- Create tests
 - Add Storybook
 - Add components to Storybook
 
@@ -45,12 +46,6 @@ As informações de acesso ao seu repositório público precisam ser postadas na
  
 
 ## How to run
-### `Configure the .env`
-
-1 - Create a account on supabase.io\
-2 - Create a .env file `see .env.sample` with REACT_APP_SUPABASE_URL and REACT_APP_SUPABASE_PUBLIC_KEY\
-Quickstart: React - [https://supabase.io/docs/guides/with-react](https://supabase.io/docs/guides/with-react)
-
 ### `yarn`
 
 Install all dependencies
@@ -58,7 +53,10 @@ Install all dependencies
 ### `yarn start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.\
+To login you can use the user and password on the top of this readme.\
+If you prefer you can create a new account.\
+The confirmation email is disabled right now.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
