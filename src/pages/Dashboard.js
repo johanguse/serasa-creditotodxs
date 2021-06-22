@@ -30,12 +30,12 @@ export function Dashboard() {
 
   return (
     <>
-      <div className="mx-auto bg-grey-400">
+      <div className="mx-auto bg-gray-100">
         <div className="min-h-screen flex flex-col">
           <Header />
 
           <main className="container mx-auto px-4 bg-white-300 flex-1 p-3 overflow-hidden">
-            <div className="grid mt-8  gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-2">
+            <div className="grid mt-8 gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-2 text-center">
               {plans.length ? (
                 plans.map((plan) => <CardPlans key={plan.id} plan={plan} />)
               ) : (
