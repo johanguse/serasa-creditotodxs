@@ -1,21 +1,14 @@
+import { Link } from "react-router-dom";
+
 export function CardPlans({ plan }) {
+  
   return (
     <div className="flex flex-col">
       <div className="bg-white shadow-md  rounded-3xl p-4">
         <div className="flex-none lg:flex">
-          <div className=" h-full w-full lg:h-48 lg:w-48   lg:mb-0 mb-3">
-            <img
-              src="https://images.unsplash.com/photo-1622180203374-9524a54b734d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1950&amp;q=80"
-              alt="Just a flower"
-              className=" w-full  object-scale-down lg:object-cover  lg:h-48 rounded-2xl"
-            />
-          </div>
           <div className="flex-auto ml-3 justify-evenly py-2">
             <div className="flex flex-wrap ">
-              <div className="w-full flex-none text-xs text-blue-700 font-medium ">
-                Shop
-              </div>
-              <h2 className="flex-auto text-lg font-medium">{plan.name}</h2>
+              <h2 className="flex-auto text-lg font-medium">Plano: {plan.name}</h2>
             </div>
             <p className="mt-3"></p>
             <div className="flex py-4  text-sm text-gray-600">
@@ -84,6 +77,7 @@ export function CardPlans({ plan }) {
                   <span>{plan.available_amount}</span>
                 </button>
               </div>
+              <Link to={`/plans/${plan.id}`}>First Post</Link>
               <button
                 className="mb-2 md:mb-0 bg-gray-900 px-5 py-2 shadow-sm tracking-wider text-white rounded-full hover:bg-gray-800"
                 type="button"

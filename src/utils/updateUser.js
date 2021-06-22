@@ -1,4 +1,4 @@
-import { supabase } from '../supabase'
+import { supabase } from "../services/supabase";
 
 export const updateUserName = async (user) => {
   const randomScoreArray = [
@@ -15,9 +15,9 @@ export const updateUserName = async (user) => {
     "680",
     "710",
   ];
-  
-  const randomScore = randomScoreArray[Math.floor(Math.random()*randomScoreArray.length)];
-  await supabase.auth.update({ 
-    data: { score: randomScore } 
+
+  const randomScore = randomScoreArray[Math.floor(Math.random() * randomScoreArray.length)];
+  await supabase.auth.update({
+    data: { score: randomScore }
   })
 };
