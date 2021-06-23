@@ -1,12 +1,12 @@
-# Atention this still in development
-User to test\
+## User and Password to login
+[https://serasa-creditotodxs.netlify.app/](https://serasa-creditotodxs.netlify.app/)\
 User: `someone@email.com`\
 Pass: `JBsdnjsZMDCiycclKDIG`
+
 ## Features
 - React with CRA
-- Login with Supabase
-- Email confirmations is disabled
-
+- Login with Supabase (Email confirmations is disabled)
+- New users will be created with random score points
 ### TO DO
 - Create tests
 - Improve resposive
