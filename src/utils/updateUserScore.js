@@ -1,6 +1,6 @@
 import { supabase } from "../services/supabase";
 
-export const updateUserName = async (user) => {
+export const updateUserScore = async (user) => {
   const randomScoreArray = [
     "120",
     "230",
